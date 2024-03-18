@@ -185,6 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
+  wanderTime: 3
   moveRange: {x: 2, y: 2}
 --- !u!95 &4636447025891448950
 Animator:
