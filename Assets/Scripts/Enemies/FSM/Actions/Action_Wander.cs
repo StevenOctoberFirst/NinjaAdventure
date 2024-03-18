@@ -26,7 +26,7 @@ public class Action_Wander : FSM_Action
         moveTimer -= Time.deltaTime;
 
         var moveDirection = (moveDestination - transform.position).normalized;
-        var movement = moveDestination * (moveSpeed * Time.deltaTime);
+        var movement = moveDirection * (moveSpeed * Time.deltaTime);
 
         if(Vector3.Distance(transform.position, moveDestination) >= .5f)
         {
@@ -42,12 +42,12 @@ public class Action_Wander : FSM_Action
 
     void GetNewDestination()
     {
-        var randomX = Random.Range(-moveDestination.x, moveDestination.x);
-        var randomY = Random.Range(-moveDestination.y, moveDestination.y);
+        var randomX = Random.Range(-moveRange.x, moveRange.x);
+        var randomY = Random.Range(-moveRange.y, moveRange.y);
 
-        moveDestination = transform.position = new Vector3(randomX, randomY);
+        moveDestination = transform.position + new Vector3(randomX, randomY);
     }
-
+    
     private void OnDrawGizmosSelected()
     {
         if (moveRange != Vector2.zero)

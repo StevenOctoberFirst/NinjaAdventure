@@ -16,7 +16,7 @@ public class FSM_State
 
     public void ExecuteActions()
     {
-        for (int i = 0; i < Actions.Length;)
+        for (int i = 0; i < Actions.Length; i++)
         {
             Actions[i].Act();
         }
