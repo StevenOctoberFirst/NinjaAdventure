@@ -3164,10 +3164,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4805871360274111132, guid: b4541fd4a3eeacc46bca2495037b455a, type: 3}
-      propertyPath: wanderTime
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7184660582093054202, guid: b4541fd4a3eeacc46bca2495037b455a, type: 3}
       propertyPath: m_Name
       value: Beast
