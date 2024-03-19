@@ -16,7 +16,7 @@ public class Decision_DetectPlayer : FSM_Decision
 
     public override bool Decide()
     {
-        throw new System.NotImplementedException();
+        return DetectPlayer();
     }
     
     private bool DetectPlayer()
@@ -34,5 +34,10 @@ public class Decision_DetectPlayer : FSM_Decision
         return false;
     }
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, aggroRange);
+    }
 
 }

@@ -35,16 +35,16 @@ public class FSM_State
 
         for(int i = 0;i < Transitions.Length;)
         {
-            /* var value = Transitions[i].Decision.Decide();
+            var value = Transitions[i].Decision.Decide();
 
             if (value)
             {
-                // Execute True State
+                brain.ChangeState(Transitions[i].TrueState);
             }
             else
             {
-                // Execute False State
-            } */
+                brain.ChangeState(Transitions[i].FalseState);
+            }
         }
 
     }
