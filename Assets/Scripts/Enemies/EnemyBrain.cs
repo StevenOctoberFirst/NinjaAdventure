@@ -5,12 +5,19 @@ using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
+public enum EnemyState
+{
+    NONE, WANDER, PATROL, CHASE, ATTACK
+}
+
 public class EnemyBrain : MonoBehaviour
 {
     [SerializeField] EnemyStateID enemyStateID;
     [SerializeField] FSM_State[] states;
 
     public FSM_State CurrentState { get; set; }
+
+    public Transform Player {  get; set; }
 
     private void Start()
     {
@@ -19,13 +26,10 @@ public class EnemyBrain : MonoBehaviour
 
     private void Update()
     {
-        UpdateState();
-    }
+        if (CurrentState == null)
+            return;
 
-    public void UpdateState()
-    {
-        CurrentState.ExecuteActions();
-        CurrentState.ExecuteTransitions();
+        CurrentState.UpdateState(this);
     }
 
     FSM_State GetState(EnemyStateID enemyStateID)
@@ -42,8 +46,7 @@ public class EnemyBrain : MonoBehaviour
 
     public void ChangeState(EnemyStateID newStateID)
     {
-
-        var newState = GetState(newStateID);
+        FSM_State newState = GetState(newStateID);
 
         if (newState == null)
             return;

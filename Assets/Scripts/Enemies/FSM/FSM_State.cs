@@ -22,24 +22,30 @@ public class FSM_State
         }
     }
 
-    public void ExecuteTransitions()
+    public void UpdateState(EnemyBrain brain)
     {
-        if (Transitions == null || Transitions.Length == 0)
+        ExecuteActions();
+        ExecuteTransitions(brain);
+    }
+
+    public void ExecuteTransitions(EnemyBrain brain)
+    {
+        if (Transitions == null || Transitions.Length <= 0)
             return;
 
-        /* for(int i = 0;i < Transitions.Length;)
+        for(int i = 0;i < Transitions.Length;)
         {
-            var value = Transitions[i].Decision.Decide();
+            /* var value = Transitions[i].Decision.Decide();
 
-            if(value)
+            if (value)
             {
                 // Execute True State
             }
             else
             {
                 // Execute False State
-            }
-        } */
+            } */
+        }
 
     }
 }

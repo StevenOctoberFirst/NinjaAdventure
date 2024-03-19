@@ -170,8 +170,8 @@ MonoBehaviour:
     - {fileID: 4805871360274111132}
     Transitions:
     - Decision: {fileID: 0}
-      TrueState: 0
-      FalseState: 0
+      TrueState: 3
+      FalseState: 1
 --- !u!114 &4805871360274111132
 MonoBehaviour:
   m_ObjectHideFlags: 0
