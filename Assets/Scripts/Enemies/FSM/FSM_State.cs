@@ -33,7 +33,7 @@ public class FSM_State
         if (Transitions == null || Transitions.Length <= 0)
             return;
 
-        for(int i = 0;i < Transitions.Length;)
+        for(int i = 0; i < Transitions.Length; i++)
         {
             var value = Transitions[i].Decision.Decide();
 
