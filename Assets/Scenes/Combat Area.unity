@@ -2260,6 +2260,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6311410722497410219, guid: 68101c3ec731b6e4da010863ef8f6505, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 8366920072988645854, guid: 68101c3ec731b6e4da010863ef8f6505, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.3683524
@@ -3164,38 +3168,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5280072714864641991, guid: b4541fd4a3eeacc46bca2495037b455a, type: 3}
-      propertyPath: points.Array.data[0].x
-      value: 2.0259273
-      objectReference: {fileID: 0}
-    - target: {fileID: 5280072714864641991, guid: b4541fd4a3eeacc46bca2495037b455a, type: 3}
-      propertyPath: points.Array.data[0].y
-      value: 2.1818445
-      objectReference: {fileID: 0}
-    - target: {fileID: 5280072714864641991, guid: b4541fd4a3eeacc46bca2495037b455a, type: 3}
-      propertyPath: points.Array.data[1].x
-      value: -2.1849055
-      objectReference: {fileID: 0}
-    - target: {fileID: 5280072714864641991, guid: b4541fd4a3eeacc46bca2495037b455a, type: 3}
-      propertyPath: points.Array.data[1].y
-      value: 2.236614
-      objectReference: {fileID: 0}
-    - target: {fileID: 5280072714864641991, guid: b4541fd4a3eeacc46bca2495037b455a, type: 3}
-      propertyPath: points.Array.data[2].x
-      value: -2.177775
-      objectReference: {fileID: 0}
-    - target: {fileID: 5280072714864641991, guid: b4541fd4a3eeacc46bca2495037b455a, type: 3}
-      propertyPath: points.Array.data[2].y
-      value: -1.2771605
-      objectReference: {fileID: 0}
-    - target: {fileID: 5280072714864641991, guid: b4541fd4a3eeacc46bca2495037b455a, type: 3}
-      propertyPath: points.Array.data[3].x
-      value: 2.610807
-      objectReference: {fileID: 0}
-    - target: {fileID: 5280072714864641991, guid: b4541fd4a3eeacc46bca2495037b455a, type: 3}
-      propertyPath: points.Array.data[3].y
-      value: -1.4500186
-      objectReference: {fileID: 0}
     - target: {fileID: 7184660582093054202, guid: b4541fd4a3eeacc46bca2495037b455a, type: 3}
       propertyPath: m_Name
       value: Beast
