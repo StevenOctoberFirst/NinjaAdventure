@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4060577069769556696}
   - component: {fileID: 4805871360274111132}
   - component: {fileID: 8079648069972693034}
+  - component: {fileID: 7177670350485912070}
   - component: {fileID: 6312521841444160839}
   - component: {fileID: 4636447025891448950}
   m_Layer: 6
@@ -166,7 +167,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f27d53429a7cb64397ea3ba9192e901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: []
+  points:
+  - {x: 2.0259273, y: 2.1818445, z: 0}
+  - {x: -2.1849055, y: 2.236614, z: 0}
+  - {x: -2.177775, y: -1.2771605, z: 0}
+  - {x: 2.610807, y: -1.4500186, z: 0}
 --- !u!114 &4060577069769556696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,22 +184,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a04a2769a1271b48bf6683c2ab80006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyStateID: 1
+  enemyStateID: 2
   states:
-  - EnemyStateID: 1
+  - EnemyStateID: 2
     Actions:
-    - {fileID: 4805871360274111132}
+    - {fileID: 7177670350485912070}
     Transitions:
     - Decision: {fileID: 6312521841444160839}
       TrueState: 3
-      FalseState: 1
+      FalseState: 2
   - EnemyStateID: 3
     Actions:
     - {fileID: 8079648069972693034}
     Transitions:
     - Decision: {fileID: 6312521841444160839}
       TrueState: 3
-      FalseState: 1
+      FalseState: 2
 --- !u!114 &4805871360274111132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,8 +227,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8181201913d3b9345a972717c5247015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseSpeed: 3
+  chaseSpeed: 2.2
   stoppingDistance: 1
+--- !u!114 &7177670350485912070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7184660582093054202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86bc2521553685e438611ed8f468eb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolSpeed: 4
 --- !u!114 &6312521841444160839
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2875,7 +2875,7 @@ Transform:
   m_GameObject: {fileID: 1540738362}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.29, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3165,40 +3165,36 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5280072714864641991, guid: b4541fd4a3eeacc46bca2495037b455a, type: 3}
-      propertyPath: points.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5280072714864641991, guid: b4541fd4a3eeacc46bca2495037b455a, type: 3}
       propertyPath: points.Array.data[0].x
-      value: 1.1350751
+      value: 2.0259273
       objectReference: {fileID: 0}
     - target: {fileID: 5280072714864641991, guid: b4541fd4a3eeacc46bca2495037b455a, type: 3}
       propertyPath: points.Array.data[0].y
-      value: 2.1143675
+      value: 2.1818445
       objectReference: {fileID: 0}
     - target: {fileID: 5280072714864641991, guid: b4541fd4a3eeacc46bca2495037b455a, type: 3}
       propertyPath: points.Array.data[1].x
-      value: -2.647019
+      value: -2.1849055
       objectReference: {fileID: 0}
     - target: {fileID: 5280072714864641991, guid: b4541fd4a3eeacc46bca2495037b455a, type: 3}
       propertyPath: points.Array.data[1].y
-      value: 1.7766802
+      value: 2.236614
       objectReference: {fileID: 0}
     - target: {fileID: 5280072714864641991, guid: b4541fd4a3eeacc46bca2495037b455a, type: 3}
       propertyPath: points.Array.data[2].x
-      value: -2.0729508
+      value: -2.177775
       objectReference: {fileID: 0}
     - target: {fileID: 5280072714864641991, guid: b4541fd4a3eeacc46bca2495037b455a, type: 3}
       propertyPath: points.Array.data[2].y
-      value: -1.1611962
+      value: -1.2771605
       objectReference: {fileID: 0}
     - target: {fileID: 5280072714864641991, guid: b4541fd4a3eeacc46bca2495037b455a, type: 3}
       propertyPath: points.Array.data[3].x
-      value: 2.5533597
+      value: 2.610807
       objectReference: {fileID: 0}
     - target: {fileID: 5280072714864641991, guid: b4541fd4a3eeacc46bca2495037b455a, type: 3}
       propertyPath: points.Array.data[3].y
-      value: -0.5195911
+      value: -1.4500186
       objectReference: {fileID: 0}
     - target: {fileID: 7184660582093054202, guid: b4541fd4a3eeacc46bca2495037b455a, type: 3}
       propertyPath: m_Name

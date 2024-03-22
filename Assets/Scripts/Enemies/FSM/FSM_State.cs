@@ -39,11 +39,13 @@ public class FSM_State
 
             if (value)
             {
-                brain.ChangeState(Transitions[i].TrueState);
+                if (Transitions[i].TrueState != EnemyStateID.NONE)
+                    brain.ChangeState(Transitions[i].TrueState);
             }
             else
             {
-                brain.ChangeState(Transitions[i].FalseState);
+                if (Transitions[i].TrueState != EnemyStateID.NONE)
+                    brain.ChangeState(Transitions[i].FalseState);
             }
         }
 

@@ -1,18 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class Action_Patrol : MonoBehaviour
+public class Action_Patrol : FSM_Action
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] float patrolSpeed;
+
+    int currentPoint;
+    Waypoint waypoint;
+
+    private void Awake()
     {
-        
+        waypoint = GetComponent<Waypoint>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Act()
     {
-        
+        FollowPatrolPath();
+    }
+
+    private void FollowPatrolPath()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, waypoint.GetPosition(currentPoint), patrolSpeed * Time.deltaTime);
+
+        if (Vector3.Distance(transform.position, waypoint.GetPosition(currentPoint)) <= 0.1f)
+        {
+            currentPoint = (currentPoint + 1) % waypoint.Points.Length;
+        }
     }
 }
