@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 8079648069972693034}
   - component: {fileID: 7177670350485912070}
   - component: {fileID: 6312521841444160839}
+  - component: {fileID: 340393888854817085}
   - component: {fileID: 4636447025891448950}
   m_Layer: 6
   m_Name: Beast
@@ -168,10 +169,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points:
-  - {x: 2.0259273, y: 2.1818445, z: 0}
-  - {x: -2.1849055, y: 2.236614, z: 0}
-  - {x: -2.177775, y: -1.2771605, z: 0}
-  - {x: 2.610807, y: -1.4500186, z: 0}
+  - {x: 2.8565726, y: 2.0987802, z: 0}
+  - {x: -1.0219998, y: 2.610405, z: 0}
+  - {x: -1.3471293, y: 0.30106676, z: 0}
+  - {x: 2.860002, y: -1.6161475, z: 0}
 --- !u!114 &4060577069769556696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,14 +193,20 @@ MonoBehaviour:
     Transitions:
     - Decision: {fileID: 6312521841444160839}
       TrueState: 3
-      FalseState: 2
+      FalseState: 0
   - EnemyStateID: 3
     Actions:
     - {fileID: 8079648069972693034}
     Transitions:
     - Decision: {fileID: 6312521841444160839}
-      TrueState: 3
+      TrueState: 0
       FalseState: 2
+    - Decision: {fileID: 340393888854817085}
+      TrueState: 4
+      FalseState: 0
+  - EnemyStateID: 4
+    Actions: []
+    Transitions: []
 --- !u!114 &4805871360274111132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8181201913d3b9345a972717c5247015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseSpeed: 2.2
+  chaseSpeed: 2.5
   stoppingDistance: 1
 --- !u!114 &7177670350485912070
 MonoBehaviour:
@@ -241,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86bc2521553685e438611ed8f468eb05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolSpeed: 4
+  patrolSpeed: 1.5
 --- !u!114 &6312521841444160839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,6 +262,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aggroRange: 5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!114 &340393888854817085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7184660582093054202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e9d0222027ac174391ffe4661fc526a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 1.1
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
