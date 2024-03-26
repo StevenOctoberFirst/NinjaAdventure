@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 8457030015398958861}
   - component: {fileID: 5280072714864641991}
   - component: {fileID: 4060577069769556696}
-  - component: {fileID: 4805871360274111132}
   - component: {fileID: 8079648069972693034}
   - component: {fileID: 7177670350485912070}
+  - component: {fileID: 2643606769953488997}
   - component: {fileID: 6312521841444160839}
   - component: {fileID: 340393888854817085}
   - component: {fileID: 4636447025891448950}
@@ -205,23 +205,12 @@ MonoBehaviour:
       TrueState: 4
       FalseState: 0
   - EnemyStateID: 4
-    Actions: []
-    Transitions: []
---- !u!114 &4805871360274111132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7184660582093054202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05ff74970dcdd184892b264505cd9420, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 4
-  wanderTime: 3
-  moveRange: {x: 2, y: 2}
+    Actions:
+    - {fileID: 2643606769953488997}
+    Transitions:
+    - Decision: {fileID: 340393888854817085}
+      TrueState: 0
+      FalseState: 3
 --- !u!114 &8079648069972693034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,6 +238,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patrolSpeed: 1.5
+--- !u!114 &2643606769953488997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7184660582093054202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbc4436ba5d7ad14894d0b783c36787b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenAttacks: 2
+  damage: 2
 --- !u!114 &6312521841444160839
 MonoBehaviour:
   m_ObjectHideFlags: 0

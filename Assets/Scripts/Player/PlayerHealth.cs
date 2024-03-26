@@ -13,17 +13,13 @@ public class PlayerHealth : MonoBehaviour, IDamagable
         playerAnimations = GetComponent<PlayerAnimations>();
     }
 
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space) && playerStats.CurrentHealth > 0)
-        {
-            TakeDamage(1f);
-        }
-    }
-
     public void TakeDamage(float damage)
     {
+        if (playerStats.CurrentHealth <= 0)
+            return;
+
         playerStats.CurrentHealth -= damage;
+        DamageManager.i.showDamageText(this.transform, damage);
         
         if(playerStats.CurrentHealth <= 0)
         {
@@ -34,6 +30,5 @@ public class PlayerHealth : MonoBehaviour, IDamagable
     void Die()
     {
         playerAnimations.HandleDeadAnimation();
-        print("Ur dead bro... kinda cringe");
     }
 }
